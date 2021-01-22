@@ -109,7 +109,7 @@ _In the command line run the following commands to install packages:
   },
   "AllowedHosts": "*",
   "ConnectionStrings": {
-      "DefaultConnection": "Server=localhost;Port=3306;database=travel;uid=root;pwd=YourPassword;"
+      "DefaultConnection": "Server=localhost;Port=3306;database=nataliya_zhuravleva_parkslookup;uid=root;pwd=YourPassword;"
   }
 }
 ```
@@ -178,13 +178,16 @@ http://localhost:5000/api/Parks/2
 
 Open URL: http://localhost:5000/swagger/index.html#/Parks
 
-1. Click Parks
-2. Click Get
-3. Click Try it out
-4. Type Mount Rainier
-5. Click Execute
-6. Enjoy
+1. Click `Parks`
+2. Click type of request, e.g. `Get`
+3. Click `Try it out`
 
+[![Image from Gyazo](https://i.gyazo.com/93525b648068768b6c4933805d1ee374.gif)](https://gyazo.com/93525b648068768b6c4933805d1ee374)
+
+4. Choose property name to make a query (e.g. `parkType`) and type nearby what you want to search (e.g.`State`)
+5. Click `Execute`
+6. Scroll Down and Enjoy of your response.
+[![Image from Gyazo](https://i.gyazo.com/b386916c81df61848424008e1d08b016.gif)](https://gyazo.com/b386916c81df61848424008e1d08b016)
 
 
 ## <span style="color:#0ec2b8">Known Bugs</span>
