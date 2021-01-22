@@ -7,8 +7,8 @@ namespace ParksLookup.Models
         public ParksLookupContext(DbContextOptions<ParksLookupContext> options)
             : base(options)
         {
+          
         }
-        public DbSet<State> States { get; set; }
-        public DbSet<NationalPark> NationalParks { get; set; }
+        public DbSet<Park> Parks { get; set; }
     }
 }
