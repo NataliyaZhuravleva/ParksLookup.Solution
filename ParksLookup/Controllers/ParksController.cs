@@ -43,7 +43,7 @@ namespace ParksLookup.Controllers
     [HttpPut("{id}")]
     public void Put(int id, [FromBody] Park park)
     {
-        animal.ParkId = id;
+        park.ParkId = id;
         _db.Entry(park).State = EntityState.Modified;
         _db.SaveChanges();
     }
