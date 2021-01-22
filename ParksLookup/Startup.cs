@@ -25,7 +25,10 @@ namespace ParksLookup
       services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
       // Register the Swagger services
-      services.AddSwaggerDocument();
+      services.AddSwaggerDocument(settings =>
+      {
+          settings.Title="Parks Lookup";
+      });
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
