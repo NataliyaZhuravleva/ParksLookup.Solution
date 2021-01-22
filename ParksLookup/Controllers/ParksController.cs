@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -19,9 +20,32 @@ namespace ParksLookup.Controllers
 
     // GET api/parks
     [HttpGet]
-    public ActionResult<IEnumerable<Park>> Get()
+    public ActionResult<IEnumerable<Park>> Get(string parkName, string parkType, string parkAddress, bool parkPetsAllowed, bool parkStore)
     {
-      return _db.Parks.ToList();
+      var query = _db.Parks.AsQueryable();
+
+      if (parkName != null)
+      {
+        query = query.Where(entry => entry.ParkName == parkName);
+      }
+      if (parkType != null)
+      {
+        query = query.Where(entry => entry.ParkType == parkType);
+      }
+      if (parkAddress != null)
+      {
+        query = query.Where(entry => entry.ParkAddress == parkAddress);
+      }
+      if (parkPetsAllowed || !parkPetsAllowed)
+      {
+        query = query.Where(entry => entry.ParkPetsAllowed == parkPetsAllowed);
+      }
+      if (parkStore || !parkStore)
+      {
+        query = query.Where(entry => entry.ParkStore == parkStore);
+      }
+
+      return query.ToList();
     }
 
     // POST api/parks
@@ -43,9 +67,9 @@ namespace ParksLookup.Controllers
     [HttpPut("{id}")]
     public void Put(int id, [FromBody] Park park)
     {
-        park.ParkId = id;
-        _db.Entry(park).State = EntityState.Modified;
-        _db.SaveChanges();
+      park.ParkId = id;
+      _db.Entry(park).State = EntityState.Modified;
+      _db.SaveChanges();
     }
 
     // DELETE api/parks/1
