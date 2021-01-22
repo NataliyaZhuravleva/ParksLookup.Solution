@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -20,7 +21,7 @@ namespace ParksLookup.Controllers
 
     // GET api/parks
     [HttpGet]
-    public ActionResult<IEnumerable<Park>> Get(string parkName, string parkType, string parkAddress, bool parkPetsAllowed, bool parkStore)
+    public ActionResult<IEnumerable<Park>> Get(string parkName, string parkType, string parkAddress, bool? parkPetsAllowed, bool? parkStore)
     {
       var query = _db.Parks.AsQueryable();
 
@@ -36,11 +37,11 @@ namespace ParksLookup.Controllers
       {
         query = query.Where(entry => entry.ParkAddress == parkAddress);
       }
-      if (parkPetsAllowed || !parkPetsAllowed)
+      if (parkPetsAllowed.HasValue)
       {
         query = query.Where(entry => entry.ParkPetsAllowed == parkPetsAllowed);
       }
-      if (parkStore || !parkStore)
+      if (parkStore.HasValue)
       {
         query = query.Where(entry => entry.ParkStore == parkStore);
       }
