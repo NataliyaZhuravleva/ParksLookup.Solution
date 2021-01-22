@@ -161,6 +161,16 @@ Base URL: https://localhost:5000
 ```
 http://localhost:5000/api/Parks/2
 ```
+
+#### <span style="color:#c4f4ef">Examples of queries with parameters for Get Requests</span>
+
+```
+To get random park: http://localhost:5000/api/parks/?random=true
+To get state parks only: http://localhost:5000/api/parks/?parkType=State
+To get parks where pets are allowed: http://localhost:5000/api/parks/?parkPetsAllowed=true
+To get national parks where pets are allowed: http://localhost:5000/api/parks/?parkPetsAllowed=true&parkType=national
+```
+
 #### <span style="color:#c4f4ef">Sample JSON Response</span>
 
 
@@ -174,6 +184,7 @@ http://localhost:5000/api/Parks/2
     "parkStore": true
 }
 ```
+
 ### <span style="color:#0ec2b8">Here is an example how to use Swagger</span>
 
 Open URL: http://localhost:5000/swagger/index.html#/Parks
@@ -187,8 +198,9 @@ Open URL: http://localhost:5000/swagger/index.html#/Parks
 4. Choose property name to make a query (e.g. `parkType`) and type nearby what you want to search (e.g.`State`)
 5. Click `Execute`
 6. Scroll Down and Enjoy of your response.
-[![Image from Gyazo](https://i.gyazo.com/b386916c81df61848424008e1d08b016.gif)](https://gyazo.com/b386916c81df61848424008e1d08b016)
 
+[![Image from Gyazo](https://i.gyazo.com/746d812e63799aefb380ac02190610e9.gif)](https://gyazo.com/746d812e63799aefb380ac02190610e9)
+#### NOTICE: If you want to get random park, please, mark `random` field as `true`.
 
 ## <span style="color:#0ec2b8">Known Bugs</span>
 
