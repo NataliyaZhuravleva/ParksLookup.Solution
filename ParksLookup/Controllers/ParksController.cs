@@ -49,17 +49,10 @@ namespace ParksLookup.Controllers
       if (random != false)
       {
         Random rnd = new Random();
-        //List<Park> returnedId = _db.Parks.ToList();
-        //int randomPark = rnd.Next(1,6); //5
-        //query = query.Where(entry => entry.ParkId == randomPark);
+        int toSkip=rnd.Next(0, _db.Parks.Count());
+        var randomPark = _db.Parks.OrderBy(r => Guid.NewGuid()).Skip(toSkip).Take(1).FirstOrDefault();
 
-        int toSkip=rnd.Next(1, _db.Parks.Count());
-        var randomRow = _db.Parks.Skip(toSkip).Take(1).First();
-        query = query.Where(entry => entry.ParkId == randomRow.ParkId);
-        //int randomId = from s in _db.Parks select new { ParkId = s.ParkId };
-        //select top(1) pid from @mytable order by newid()
-
-
+        query = query.Where(entry => entry.ParkId == randomPark.ParkId);
       }
       return query.ToList();
     }

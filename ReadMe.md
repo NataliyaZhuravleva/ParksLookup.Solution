@@ -204,7 +204,7 @@ Open URL: http://localhost:5000/swagger/index.html#/Parks
 
 ## <span style="color:#0ec2b8">Known Bugs</span>
 
-_No known bags_
+_Sometimes random gives an empty record._
 
 ## <span style="color:#0ec2b8">Support and contact details</span>
 
