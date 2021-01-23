@@ -21,7 +21,7 @@ namespace ParksLookup.Controllers
 
     // GET api/parks
     [HttpGet]
-    public ActionResult<IEnumerable<Park>> Get(string parkName, string parkType, string parkAddress, bool? parkPetsAllowed, bool? parkStore, bool random)
+    public ActionResult<IEnumerable<Park>> Get(string parkName, string parkType, string parkAddress, bool? parkPetsAllowed, bool? parkStore, bool random, string search)
     {
       var query = _db.Parks.AsQueryable();
 
@@ -54,6 +54,12 @@ namespace ParksLookup.Controllers
 
         query = query.Where(entry => entry.ParkId == randomPark.ParkId);
       }
+
+      if (search !=null)
+      {
+        query = query.Where(entry => entry.ParkName == search);
+      }
+
       return query.ToList();
     }
 
