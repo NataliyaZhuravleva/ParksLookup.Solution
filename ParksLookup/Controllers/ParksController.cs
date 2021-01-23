@@ -49,8 +49,8 @@ namespace ParksLookup.Controllers
       if (random != false)
       {
         Random rnd = new Random();
-        int toSkip=rnd.Next(0, _db.Parks.Count());
-        var randomPark = _db.Parks.OrderBy(r => Guid.NewGuid()).Skip(toSkip).Take(1).FirstOrDefault();
+        int toSkip = rnd.Next(0, _db.Parks.Count());
+        Park randomPark = _db.Parks.OrderBy(r => Guid.NewGuid()).Skip(toSkip).Take(1).First();
 
         query = query.Where(entry => entry.ParkId == randomPark.ParkId);
       }

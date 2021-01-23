@@ -204,7 +204,7 @@ Open URL: http://localhost:5000/swagger/index.html#/Parks
 
 ## <span style="color:#0ec2b8">Known Bugs</span>
 
-_Sometimes random gives an empty record._
+_Sometimes random gives an empty record (when query with at least two parameters). Works appropriately with `?random=true` only parameter._
 
 ## <span style="color:#0ec2b8">Support and contact details</span>
 
