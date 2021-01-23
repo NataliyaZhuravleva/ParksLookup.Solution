@@ -166,6 +166,7 @@ http://localhost:5000/api/Parks/2
 
 ```
 To get random park: http://localhost:5000/api/parks/?random=true
+To search park by parkName http://localhost:5000/api/parks/?search=Lake Sammamish
 To get state parks only: http://localhost:5000/api/parks/?parkType=State
 To get parks where pets are allowed: http://localhost:5000/api/parks/?parkPetsAllowed=true
 To get national parks where pets are allowed: http://localhost:5000/api/parks/?parkPetsAllowed=true&parkType=national
