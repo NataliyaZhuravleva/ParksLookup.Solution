@@ -1,9 +1,46 @@
-# <span style="color:#0ec2b8">_Parks Lookup API app_</span>
+# <p style="color:#0ec2b8" align="center">_Parks Lookup API app_</p>
 
-#### _Parks Lookup API app_
-#### _Initialization Date: 01/22/2021_
+<p align="center">
+    <!-- Project Avatar -->
+    <br>
+    <a href="https://github.com/NataliyaZhuravleva">
+        <img src="https://avatars.githubusercontent.com/u/26223609?s=400&u=eba3685b0fa16a0c66c8dec64c2cd7886929b509&v=4">
+    </a>
+    <!-- GitHub Link -->
+   <p align="center">
+        <a href="https://github.com/NataliyaZhuravleva" style="color: #0ec2b8;">Nataliya Zhuravleva</a>
+    </p>
+    <!-- LinkedIn -->
+    <p align="center">
+        <a href="mailto:natalindria@gmail.com">
+            <img src="https://img.shields.io/badge/Email-00AAAB??style=social&logo=gmail&labelColor=00AAAB">
+        </a>  
+        <a href="https://www.linkedin.com/in/nataliya-zhuravleva/">
+            <img src="https://img.shields.io/badge/LinkedIn-00AAAB??style=social&logo=linkedin&labelColor=00AAAB">
+        </a>      
+    </p>    
+</p>
+<p align="center">
+  <small>Initiated January 22th, 2021</small>
+</p>
 
-#### By _**Nataliya Zhuravleva**_
+## <span style="color:#0ec2b8">Table of Contents</span>
+* <a href="#">Description</a>
+    * <a href="#📖-description">Description</a>
+    * <a href="#🦠-known-bugs">Known Bugs</a>
+    * <a href="#🛠-built-with">Built With</a>
+    <!-- * <a href="#🔍-preview">Preview</a> -->
+* <a href="#🏁-getting-started">Getting Started</a>
+    * <a href="#📋-prerequisites">Prerequisites</a>
+    * <a href="#⚙️-setup-and-use">Setup and Use</a>
+* <a href="#🛰️-api-documentation">API Documentation</a>
+* <a href="#🤝-contributors">Auxiliary</a>
+    * <a href="#🤝-contributors">Contributors</a>
+    * <a href="#✉️-contact-and-support">Contact</a>
+    * <a href="#⚖️-license">License</a>
+    * <a href="#🌟-acknowledgements">Acknowledgements</a>
+
+
 
 ## <span style="color:#0ec2b8">Description</span>
 
